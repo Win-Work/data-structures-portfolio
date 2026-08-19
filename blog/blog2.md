@@ -1,3 +1,4 @@
+#Blog 2
 Why learning data science in social and interdisciplinary contexts matters. 
 
-Learning data science in social and interdisciplinary contexts matters because contexts reveals what data alone cannot. It is sometimes easy to find areas that don't fit the norm. It could be a school with lower test scores that the national average, 
+Learning data science in social and interdisciplinary contexts matters because contexts reveals what data alone cannot. It is sometimes easy to find areas that don't fit the norm. It could be a school with lower test scores than the national average or a neighborhood that has higher disease rates than the national average, but those alone does not tell the whole story. Schools with low test scores could be in an area with underfunded schools that don't have the capital to supply the students with the necessary tools. A neighborhood with high disease rates could be victims of a nearby factory's emissions. There could be numerous other reasons why the data is like that and the role of a good data scientist is including the context with the findings.
