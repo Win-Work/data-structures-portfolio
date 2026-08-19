@@ -1,6 +1,5 @@
 # Your Name
-Data Science Student  
+Winston Workman 
 UNC Charlotte
 ## About Me
-Welcome to my Data Science Studio portfolio.
-This website will document my learning and projects throughout the semester.
+I am a currently a data science major attending UNC Charlotte. I am a big fan of anything motorsports and race as well. I hope to be involved in a motorsport specific field upon graduation.
