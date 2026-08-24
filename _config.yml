@@ -5,6 +5,7 @@ logo: profile.png
 author: Your Name
 show_downloads: false
   is_project_page: false
+  github:
 social_links:
   github: https://github.com/win-work
   linkedin: https://linkedin.com/in/workmanw
