@@ -7,7 +7,11 @@ UNC Charlotte - Data Science
 ## About Me
 I am a currently a data science major attending UNC Charlotte. I am a big fan of anything motorsports and race as well. I hope to be involved in a motorsport specific field upon graduation.
 
-### [Resume](WinstonWorkmanResume.pdf)
+### Social Links and Resume
+
+- [GitHub Homepage](https://github.com/Win-Work)
+- [My LinkedIn](https://linkedin.com/in/workmanw)
+- [Resume](WinstonWorkmanResume.pdf)
 
 ## Blog
 
