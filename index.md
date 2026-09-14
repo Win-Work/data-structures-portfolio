@@ -3,7 +3,7 @@ UNC Charlotte
 
 Data Science
 
-![Portrait](SP008459-36A.jpeg)
+![Portrait](SP008459-36A.jpg)
 
 ## Blog
 
