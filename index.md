@@ -13,6 +13,10 @@ I am a currently a data science major attending UNC Charlotte. I am a big fan of
 - [My LinkedIn](https://linkedin.com/in/workmanw)
 - [Resume](WinstonWorkmanResume.pdf)
 
+## Projects
+
+- Coming Soom
+
 ## Blog
 
 - [Blog Post 1](blog/blog1.html)
