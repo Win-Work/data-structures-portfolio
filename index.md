@@ -1,6 +1,6 @@
 # Winston Workman
 
-<img src="SP008459-36A.jpg" alt="Winston Workman" width="100">
+<img src="SP008459-36A.jpg" alt="Winston Workman" width="200">
 
 UNC Charlotte - Data Science
 
