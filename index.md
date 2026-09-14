@@ -1,12 +1,12 @@
-# Winston Workman
 UNC Charlotte - Data Science
+
+![Portrai# Winston Workman
 
 ## About Me
 I am a currently a data science major attending UNC Charlotte. I am a big fan of anything motorsports and race as well. I hope to be involved in a motorsport specific field upon graduation.
 
 ### [Resume](WinstonWorkmanResume.pdf)
-
-![Portrait](SP008459-36A.jpg)
+t](SP008459-36A.jpg)
 
 ## Blog
 
