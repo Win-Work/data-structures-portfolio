@@ -33,9 +33,14 @@ The data source I used is from a python package called "pynascar" (github.com/ab
 
 ### Preperation
 
-In order to understand the structure of the data I went through a single race (2026 Daytona 500) and found the variables I needed.
+In order to understand the structure, I pulled the full 2026 schedule dataset:
 
 <img width="2738" height="1642" alt="Screenshot 2026-09-16 193241" src="https://github.com/user-attachments/assets/aedcc703-8a7d-4a28-ad8d-c5f631afdccf" />
+
+And then got only the finished races to use for my data visualizations:
+
+<img width="2730" height="1654" alt="image" src="https://github.com/user-attachments/assets/ce194502-7c87-43b3-88a2-d598cfbf48fb" />
+
 
 
 
