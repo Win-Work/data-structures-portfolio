@@ -10,7 +10,7 @@ Does pitting during a stage-ending caution (vs. staying out to collect stage poi
 
   A NASCAR race is split up into 3 smaller "races" composed of stages. Each race will have 1 to 3 stages including the final stage and it depends on the length of the race. Usually, the first and second stages will be fairly short compared to the final stage which will span for around the entire second half of the race. After each stage, there is a short period of caution where the pace car comes out, and teams can choose whether to bring their cars into the pits to change tires and/or refuel the car.
 
-  This call is usually judged by the team's predetermined strategy going into the race; however, teams often change strategies due to various reasons. One example could be a team skipping a stage pit to run a driver on a longer stint for end-race track position which risks running out of fuel or tire if not already adjusted for that. My research question is relevant by looking to find whether there is a correlation between the team choosing to pit their cars or not during the stage caution or are there more forces at work that skew answer than just choosing between the two. Hopefully my finding is able to guide strategists into making an easier decision on whether to pit their driver or not.
+  This call is usually judged by the team's predetermined strategy going into the race; however, teams often change strategies due to various reasons. One example could be a team skipping a stage pit to run a driver on a longer stint for end-race track position which risks running out of fuel or tire if not already adjusted for that. My research question is relevant by looking to find whether there is a correlation between the team choosing to pit their cars or not during the stage caution or are there more forces at work that skew the answer than just choosing between the two.
 
 ## Data Definitions
 
@@ -27,7 +27,7 @@ Does pitting during a stage-ending caution (vs. staying out to collect stage poi
 
 ### Data Source
 
-The data source I used is from a python package called "pynascar" (github.com/ab5525/pynascar). The package retrieves the race data NASCAR's internal data feeds (cf.nascar.com/cacher/). It is the same backend that runs NASCAR.com's live results and stat pages. The data source includes multiple datasets, but the main ones I used are "race.results" (final results, stage-by-stage results, caution flag logs, qualifying data) and "race.telemetry" (lap-by-lap timing, pit stop records, and flag/event logs). The scope of my project is pulling the from the 2026 NASCAR Cup Series (series_id 1) regular season races, race_ids 5593–5623 (30 races total), with race data (race name, track type) from pynascar's Schedule class.
+The data source I used is from a python package called "pynascar" (github.com/ab5525/pynascar). The package retrieves the race data NASCAR's internal data feeds (cf.nascar.com/cacher/). It is the same backend that runs NASCAR.com's live results and stat pages. The data source includes multiple datasets, but the main ones I used are "race.results" (final results, stage-by-stage results, caution flag logs, qualifying data) and "race.telemetry" (lap-by-lap timing, pit stop records, and flag/event logs). The scope of my project is pulling the data from the 2026 NASCAR Cup Series (series_id 1) regular season races, race_ids 5593–5623 (30 races total), with race data (race name, track type) from pynascar's Schedule class.
 
 ## Data Cleaning
 
@@ -43,10 +43,9 @@ Then I got only the finished races to use for my data visualizations:
 
 ### Cleaning
 
-To find the variables and the datasets I needed, I went through the single race process of finding the specific per-race stats I need for the visualizations. The original dataset had the drivers who did not in starting_position 0, so I filtered it out all the drivers who did = 0. I then removed all of the columns that I did not need to calculate average finishing positions. 
+To find the variables and the datasets I needed, I went through the single race process of finding the specific per-race stats I need for the visualizations. The original dataset had the drivers who did not in start starting_position 0, so I filtered out all the drivers who's starting_position = 0. I then removed all of the columns that I did not need to calculate the average finishing positions. 
 
 <img width="2792" height="1452" alt="image" src="https://github.com/user-attachments/assets/a199ebe8-42f2-4dd1-a6d8-9501eb559051" />
-
 
 I then pulled the Daytona 500 caution dataset to figure out what the stage caution was listed as a variable. I found it listed as "competition".
 
@@ -87,7 +86,7 @@ This dataset captures what strategy a driver chose and how they finished, but no
 What biases or collection gaps exist in the data:
 - Sample imbalance by track type: The comparison between strategies is far more balanced at some track types than others. Short tracks had 215 "pitted" samples but only 6 "stayed out" samples; road courses showed the reverse imbalance (17 pitted vs. 94 stayed out). This means the short-track and road-course findings rest on very small samples for one group, and may be disproportionately influenced by a handful of drivers rather than reflecting a broad pattern.
 - Selection bias in the pit/stay decision itself: The decision to pit or stay out is not random — drivers already running near the back of the field may be more likely to stay out since they have less to lose, which could make the "stayed out" group's results look worse than the strategy itself actually is. This limits how directly the results can be attributed to the strategy choice alone.
-- Data source reliability: pynascar is a community-maintained, unofficial package built on reverse-engineered NASCAR data feeds.During data collection, 4 of 30 targeted races (5593, 5595, 5601, 5608) failed to return data due to server errors and had to be ignored, reducing the final sample to 27 races.
+- Data source reliability: pynascar is a community-maintained, unofficial package built on reverse-engineered NASCAR data feeds. During data collection, 4 of 30 targeted races (5593, 5595, 5601, 5608) failed to return data due to server errors and had to be ignored, reducing the final sample to 27 races.
 - Non-points events: The initial race ID range included at least one non-points exhibition event (the NASCAR All-Star Race) and a qualifying event (the Daytona Duel), which do not carry the same stakes or strategic incentives as points-paying races. I ended up keeping the results in the notebook due to wanting to keep the entire dataset I had together.
 
 What would I explore next with more time or data?
