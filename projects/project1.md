@@ -35,7 +35,7 @@ The data source I used is from a python package called "pynascar" (github.com/ab
 
 In order to understand the structure, I pulled the full 2026 schedule dataset:
 
-<img width="2738" height="1642" alt="Screenshot 2026-09-16 193241" src="https://github.com/user-attachments/assets/aedcc703-8a7d-4a28-ad8d-c5f631afdccf" />
+<img width="2738" alt="Screenshot 2026-09-16 193241" src="https://github.com/user-attachments/assets/aedcc703-8a7d-4a28-ad8d-c5f631afdccf" />
 
 Then I got only the finished races to use for my data visualizations:
 
