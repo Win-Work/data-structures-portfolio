@@ -15,7 +15,7 @@ I am a currently a data science major attending UNC Charlotte. I am a big fan of
 
 ## Projects
 
-- Coming Soom
+- [NASCAR Caution Pit Strategy Analysis](projects/project1.md)
 
 ## Blog
 
