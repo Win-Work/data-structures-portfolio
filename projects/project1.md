@@ -8,7 +8,7 @@ Does pitting during a stage-ending caution (vs. staying out to collect stage poi
 
 ### Context
 
-  A NASCAR race is split up into 3 smaller "races" composed of stages. Each race will have 1 to 3 stages including the final stage and it depends on the length of the race. Usually, the first and second stages will be fairly short compared to the final stage which will span for around the entire second half of the race. After each stage, there is a short period of caution where the pace car comes out, and teams can choose whether to bring their cars into the pits to change tires and/or refuel the car.
+  A NASCAR race is split up into 3 smaller "races" composed of stages. Each race will have 1 to 3 stages including the final stage and it depends on the length of the race. Usually, the first and second stages will be fairly short compared to the final stage which will span for around the entire second half of the race. After each stage, there is a short period of caution where the pace car comes out, and teams can choose whether to bring their cars into the pits to change tires and/or refuel the car. This information could be useful for the crew chiefs and or drivers making those tough calls.
 
   This call is usually judged by the team's predetermined strategy going into the race; however, teams often change strategies due to various reasons. One example could be a team skipping a stage pit to run a driver on a longer stint for end-race track position which risks running out of fuel or tire if not already adjusted for that. My research question is relevant by looking to find whether there is a correlation between the team choosing to pit their cars or not during the stage caution or are there more forces at work that skew the answer than just choosing between the two.
 
@@ -101,14 +101,15 @@ With additional time, this analysis could be strengthened by:
 
 [NASCAR Stage Caution Pit Analysis Notebook](Project1Notebook.ipynb)
 
+Anthropic. (2025). Claude (Sonnet 4.5) [Large language model]. https://claude.ai
+
+Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90–95. https://doi.org/10.1109/MCSE.2007.55
+
+McKinney, W. (2010). Data structures for statistical computing in Python. In S. van der Walt & J. Millman (Eds.), Proceedings of the 9th Python in Science Conference (pp. 56–61). https://doi.org/10.25080/Majora-92bf1922-00a
+
+NASCAR. (2026). NASCAR statistics and race data [Data set]. https://cf.nascar.com/cacher/
+
 Ab5525. (n.d.). pynascar [Computer software]. GitHub. https://github.com/ab5525/pynascar
-
-NASCAR. (2026). NASCAR statistics and race data [Data set]. Retrieved via cf.nascar.com/cacher/
-
-McKinney, W. (2010). pandas: a foundational Python library for data analysis and statistics.
-Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90-95.
-
-AI tool: Claude (Anthropic). Used for debugging code and drafting visualization scripts. All code was executed and verified by the author.
 
 
 
