@@ -99,7 +99,8 @@ With additional time, this analysis could be strengthened by:
 -Investigating stage-by-stage effects separately (Stage 1 caution vs. Stage 2 caution) rather than combining all "Competition" cautions together, since strategic incentives may differ depending on how much of the race remains.
 
 ## Code and References
-- 
+
+[NASCAR Stage Caution Pit Analysis Notebook](projects/Project1Notebook.ipynb)
 
 
 
