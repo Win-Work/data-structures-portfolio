@@ -102,5 +102,16 @@ With additional time, this analysis could be strengthened by:
 
 [NASCAR Stage Caution Pit Analysis Notebook](Project1Notebook.ipynb)
 
+Ab5525. (n.d.). pynascar [Computer software]. GitHub. https://github.com/ab5525/pynascar
+
+NASCAR. (2026). NASCAR statistics and race data [Data set]. Retrieved via cf.nascar.com/cacher/
+
+McKinney, W. (2010). pandas: a foundational Python library for data analysis and statistics.
+Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. Computing in Science & Engineering, 9(3), 90-95.
+
+AI tool: Claude (Anthropic). Used for debugging code and drafting visualization scripts. All code was executed and verified by the author.
+
+
+
 
 
