@@ -100,7 +100,7 @@ With additional time, this analysis could be strengthened by:
 
 ## Code and References
 
-[NASCAR Stage Caution Pit Analysis Notebook](projects/Project1Notebook.ipynb)
+[NASCAR Stage Caution Pit Analysis Notebook](Project1Notebook.ipynb)
 
 
 
