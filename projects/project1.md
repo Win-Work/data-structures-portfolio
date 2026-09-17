@@ -39,35 +39,35 @@ In order to understand the structure, I pulled the full 2026 schedule dataset:
 
 Then I got only the finished races to use for my data visualizations:
 
-<img width="2730" height="1654" alt="image" src="https://github.com/user-attachments/assets/ce194502-7c87-43b3-88a2-d598cfbf48fb" />
+<img width="2730" alt="image" src="https://github.com/user-attachments/assets/ce194502-7c87-43b3-88a2-d598cfbf48fb" />
 
 ### Cleaning
 
 To find the variables and the datasets I needed, I went through the single race process of finding the specific per-race stats I need for the visualizations. The original dataset had the drivers who did not in start starting_position 0, so I filtered out all the drivers who's starting_position = 0. I then removed all of the columns that I did not need to calculate the average finishing positions. 
 
-<img width="2792" height="1452" alt="image" src="https://github.com/user-attachments/assets/a199ebe8-42f2-4dd1-a6d8-9501eb559051" />
+<img width="2792" alt="image" src="https://github.com/user-attachments/assets/a199ebe8-42f2-4dd1-a6d8-9501eb559051" />
 
 I then pulled the Daytona 500 caution dataset to figure out what the stage caution was listed as a variable. I found it listed as "competition".
 
-<img width="2712" height="740" alt="image" src="https://github.com/user-attachments/assets/c814127d-dfef-4ad4-aac1-8bec5a76ef3b" />
+<img width="2712" alt="image" src="https://github.com/user-attachments/assets/c814127d-dfef-4ad4-aac1-8bec5a76ef3b" />
 
 Here I am creating a new stage_caution variable and filtering it to only those listed "competition" since that is the stage causion. I am then constraining it to only the start lap and end lap of the caution and dropping every row besides lap and driver_name.
 
-<img width="2748" height="1184" alt="image" src="https://github.com/user-attachments/assets/2f0da121-34b5-41a1-984b-6b677962eb0e" />
+<img width="2748" alt="image" src="https://github.com/user-attachments/assets/2f0da121-34b5-41a1-984b-6b677962eb0e" />
 
 Lastly, before the visualizations, I do the same filtering and constrains as above but I print who is pitting or staying out for an easier way to see that data.
 
-<img width="2798" height="836" alt="image" src="https://github.com/user-attachments/assets/f3b3ef6d-ba89-4d94-860a-c97fb0d1804b" />
+<img width="2798" alt="image" src="https://github.com/user-attachments/assets/f3b3ef6d-ba89-4d94-860a-c97fb0d1804b" />
 
 ## Visualizations
 
 I created 2 charts using matplotlib:
 
-<img width="1389" height="590" alt="image" src="https://github.com/user-attachments/assets/f7512db9-34e5-46a0-bcf7-894390d89ce1" />
+<img width="1389" alt="image" src="https://github.com/user-attachments/assets/f7512db9-34e5-46a0-bcf7-894390d89ce1" />
 
 This chart shows the average finishing position of drivers who pitted during the stage ending caution versus those who stayed out, across each race in the season. Drivers who pitted show a very consistent trend, usually finishing in a narrow spread regardless of the race. Drivers who stayed out show much higher volatility, sometimes finishing far better than the pitted group, sometimes far worse. This suggests that staying out during the stage caution is a higher-risk, higher-variance strategy compared to the predictability of pitting.
 
-<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/00ddc50d-04ab-4c74-b68b-0d54b84bba2b" />
+<img width="989" alt="image" src="https://github.com/user-attachments/assets/00ddc50d-04ab-4c74-b68b-0d54b84bba2b" />
 
 This chart shows the difference between the average finishing positions for drivers who stayed out vs pitted at each track type: Short Track, Intermediate, Superspeedway, and Road Course. A negative value (in green) means pitting produced a better average finish; a positive value (in red) means staying out produced a better average finish. This reveals that the pit strategy is not consistent across each track type. At short track pitting during a stage caution shows a large advantage (about 12 places better on average). Although, staying out at the other 3 options shows a slight advantage (2.5 to 5 places better on average). This directly answers the "does this differ by track type" part of the research question. The data shows that track type does play a role in whether pitting or staying out is the better choice.
 
