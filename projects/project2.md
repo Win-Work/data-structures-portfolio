@@ -31,20 +31,20 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.,
 
 ### Data Preparation and Feature Selection
 
-<img width="2646" height="812" alt="image" src="https://github.com/user-attachments/assets/01799304-79f6-4439-867a-79b91dd67b1b" />
+<img width="2646" alt="image" src="https://github.com/user-attachments/assets/01799304-79f6-4439-867a-79b91dd67b1b" />
 
 When importing the data, there was a duplicate semicolon delimited column that I used the function "load_clean_csv" to skip that column. I then added columns "year" and "event" from the parent files onto my dataframe.
 
-<img width="2658" height="1308" alt="image" src="https://github.com/user-attachments/assets/187a56e7-0970-4200-a068-a3626c8782f9" />
+<img width="2658" alt="image" src="https://github.com/user-attachments/assets/187a56e7-0970-4200-a068-a3626c8782f9" />
 
 On the original dataset, the time features were setup as strings. I created the function "to_seconds" to covert those stings to float seconds. I then dropped any lap without a useable time or number.
 I use the describe to look at the spread of the lap time data and to see if there are any outliers that will skew the model. The max is showing a lap time over 1000 seconds which needs to get trimmed out.
 
-<img width="2650" height="938" alt="image" src="https://github.com/user-attachments/assets/22116913-fa17-49df-bfdd-7a741f584307" />
+<img width="2650" alt="image" src="https://github.com/user-attachments/assets/22116913-fa17-49df-bfdd-7a741f584307" />
 
 Here I am getting rid of any laps that will create noise in my models. Those laps were any that were listed as full course caution or green at the finish line since they would not be laps at race pace. I also removed any lap where the car crossed the finish line in the pits and created a list for any out lap which were the "is_pit" lap shifted forward by 1. I then created "fcy_prev" and "fcy_next" using the same method.
 
-<img width="2650" height="1394" alt="image" src="https://github.com/user-attachments/assets/a58e6633-57e5-4785-9a7e-01f5f1d24fe1" />
+<img width="2650" alt="image" src="https://github.com/user-attachments/assets/a58e6633-57e5-4785-9a7e-01f5f1d24fe1" />
 
 I create a new stint and tire age feature for the model. The stint is the number of laps completed between pits and tire age just about the same thing, but it tells how many laps the tires on the car have been ran for. I then put together all of the cleaned data into a new dataset.
 
@@ -52,23 +52,23 @@ I create a new stint and tire age feature for the model. The stint is the number
 
 ### Scaling
 
-<img width="2698" height="1428" alt="image" src="https://github.com/user-attachments/assets/476d8be6-f44a-444f-84e2-3ef9c3f93e31" />
+<img width="2698" alt="image" src="https://github.com/user-attachments/assets/476d8be6-f44a-444f-84e2-3ef9c3f93e31" />
 
 Since each track has different lap times and lengths, a 5 second difference at a very short track does not mean the same as a 5 second difference at very long track. I turned the lap times into a ratio by dividing each lap by the track's median lap time. This makes a 1% slowdown at Detroit and a 1%
 slowdown at Daytona equal. This helps because tire wear tends to cost the same share of lap time no matter the track. With keeping the lap times the raw seconds, the model would use its effort to try and learn which track each lap came from instead of what the tires are doing.
 
 ### Training
 
-<img width="2700" height="1210" alt="image" src="https://github.com/user-attachments/assets/2a4eb433-779a-46e6-ad9e-cb30c2e5c0ab" />
+<img width="2700" alt="image" src="https://github.com/user-attachments/assets/2a4eb433-779a-46e6-ad9e-cb30c2e5c0ab" />
 
 For the model I chose to do an 80/20 split for training and testing. While this is a common split, it left me with around 15,000 laps for testing because the data set was so large.
 The split is by stint and not single laps; that was to keep laps from same stint from being in both sets.
 
 ### Baseline Performance
 
-<img width="1254" height="120" alt="image" src="https://github.com/user-attachments/assets/d27aba7e-1716-4278-bce2-a4a2e7d281f5" />
+<img width="1254" alt="image" src="https://github.com/user-attachments/assets/d27aba7e-1716-4278-bce2-a4a2e7d281f5" />
 
-<img width="296" height="34" alt="image" src="https://github.com/user-attachments/assets/a85464f7-fd40-4859-9158-d8ca9bf7b811" />
+<img width="296" alt="image" src="https://github.com/user-attachments/assets/a85464f7-fd40-4859-9158-d8ca9bf7b811" />
 
 For all of the models, they were scored with MAE (mean absolute error) which calculates the average difference between predicted and actual lap time ratio.
 The baseline test is the simplest model used to predict lap time from the training set. For my baseline MAE I got .712% and any improvement beyond that shows how much better the features help in consistently predicting the laptimes.
@@ -81,13 +81,13 @@ I trained two models to predict lap time as a ratio of the car's median lap in t
 
 Both models use the same inputs: tire age, lap number, manufacturer, and event. The numeric features were scaled, and categorical features were one-hot coded, so both models see the same data. Boosting used max depth 4, learning rate 0.05, and 300 iterations.
 
-<img width="768" height="160" alt="image" src="https://github.com/user-attachments/assets/65e9295e-4407-4486-812e-cddb2e702c1e" />
+<img width="768" alt="image" src="https://github.com/user-attachments/assets/65e9295e-4407-4486-812e-cddb2e702c1e" />
 
 ### Model Interpretation
 
 Both models beat the baseline, boosting by about 6% and linear by about 2%. The linear model estimates that tire age cost about .01% of lap time per lap. That is roughly .3% over a 30-lap stint. Boosing's advantage suggests that the effect is not linear.
 
-<Figure size 800x500 with 1 Axes><img width="703" height="468" alt="image" src="https://github.com/user-attachments/assets/e0f9a19e-3829-4023-8798-313d25f692c6" />
+<Figure size 800x500 with 1 Axes><img width="703" alt="image" src="https://github.com/user-attachments/assets/e0f9a19e-3829-4023-8798-313d25f692c6" />
 
 
 This chart shows how the two models think lap times change as tires age. For each tire age from 1 to 45, every lap in the test set is treated as if it were at that age, and the model's predictions are averaged. Each line is then shifted to start at zero at lap 1.
