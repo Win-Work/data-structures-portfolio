@@ -114,7 +114,7 @@ This model isn't ready for strategy decisions. A team would need tire compound a
 
 ### Code and AI Transparency
 
-Code link
+(Project 2 Notebook)[projects/Project2.ipynb]
 
 Anthropic. (2026). Claude [Large language model]. https://claude.ai
 
