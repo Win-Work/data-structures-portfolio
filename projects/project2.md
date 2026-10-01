@@ -126,7 +126,7 @@ McKinney, W. (2010). Data structures for statistical computing in Python. In S. 
 
 Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825–2830.
 
-tobi. ([year of last update]). imsa_data [Data set]. GitHub. https://github.com/tobi/imsa_data
+tobi. (2026). imsa_data. GitHub. https://github.com/tobi/imsa_data
 
 
 
