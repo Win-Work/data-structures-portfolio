@@ -13,7 +13,7 @@ I'm Winston, a data science student at the University of North Carolina at Charl
 
 - [GitHub Homepage](https://github.com/Win-Work)
 - [My LinkedIn](https://linkedin.com/in/workmanw)
-- [Resume](WinstonWorkmanResume.pdf)
+- [Resume](WinstonWorkmanDSResume.pdf)
 
 ## Projects
 
