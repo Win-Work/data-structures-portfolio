@@ -19,12 +19,3 @@ I'm Winston, a data science student at the University of North Carolina at Charl
 
 - [NASCAR Caution Pit Strategy Analysis](projects/project1.md)
 - [IMSA GTDPro Tire Degradation Analysis](projects/project2.md)
-
-## Blog
-
-- [Blog Post 1](blog/blog1.html)
-- [Blog Post 2](blog/blog2.html)
-
-
-
-
